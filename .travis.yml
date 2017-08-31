@@ -16,3 +16,11 @@ cache:
     - $HOME/.coursier
     - $HOME/.embedmysql
     - $HOME/.embedpostgresql
+deploy:
+  provider: releases
+  api-key: "a26dbdaf913ef771da747e2d9dfe2aefc8916fb0"
+  file_glob: true
+  file: target/*
+  skip_cleanup: true
+  on:
+    tags: true
